@@ -10,13 +10,12 @@ provider "github" {
 }
 
 module "teams" {
-  for_each = local.teams
-  source   = "./modules/teams"
+  source = "./modules/teams/multi"
+
+  teams = local.teams
+
 
   github_owner = local.github_owner
-  team_name    = each.key
-  members      = each.value.members
-  maintainers  = each.value.maintainers
 }
 
 module "members" {
