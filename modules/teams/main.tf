@@ -6,7 +6,7 @@ resource "github_team" "team" {
 }
 
 resource "github_team_membership" "team_members" {
-  for_each = toset(var.members)
+  for_each = var.members
   team_id  = github_team.team.id
 
   username = each.value
@@ -14,7 +14,7 @@ resource "github_team_membership" "team_members" {
 }
 
 resource "github_team_membership" "team_maintainers" {
-  for_each = toset(var.maintainers)
+  for_each = var.maintainers
   team_id  = github_team.team.id
 
   username = each.value

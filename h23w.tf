@@ -1,5 +1,5 @@
 module "h23w_parent_team" {
-  source = "./modules/teams/base"
+  source = "./modules/teams"
 
   team_name   = "hackathon_23_winter"
   members     = local.h23w_parent.members
@@ -9,9 +9,15 @@ module "h23w_parent_team" {
 }
 
 module "h23w_children_teams" {
-  source = "./modules/teams/multi"
+  for_each = local.h23w_children
+  source   = "./modules/teams"
 
-  teams        = local.h23w_children
+  team_name   = each.key
+  members     = each.value.members
+  maintainers = each.value.maintainers
+
+  parent_id = module.h23w_parent_team.team_id
+
   github_owner = local.github_owner
 }
 

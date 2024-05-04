@@ -1,5 +1,5 @@
 resource "github_membership" "member" {
-  for_each = toset(var.members)
+  for_each = var.members
 
   username = each.key
 }
