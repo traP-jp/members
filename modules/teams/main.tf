@@ -1,22 +1,27 @@
 resource "github_team" "team" {
   name        = var.team_name
-  description = "Team for ${var.team_name}"
+  description = var.description == "" ? null : var.description
+  privacy     = var.secret ? "secret" : "closed"
 
   parent_team_id = var.parent_id == "" ? null : var.parent_id
 }
 
-resource "github_team_membership" "team_members" {
-  for_each = var.members
-  team_id  = github_team.team.id
+resource "github_team_members" "team_members" {
+  team_id = github_team.team.id
 
-  username = each.value
-  role     = "member"
-}
+  dynamic "members" {
+    for_each = toset(var.members)
+    content {
+      username = members.value
+      role     = "member"
+    }
+  }
 
-resource "github_team_membership" "team_maintainers" {
-  for_each = var.maintainers
-  team_id  = github_team.team.id
-
-  username = each.value
-  role     = "maintainer"
+  dynamic "members" {
+    for_each = toset(var.maintainers)
+    content {
+      username = members.value
+      role     = "maintainer"
+    }
+  }
 }

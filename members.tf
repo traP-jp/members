@@ -18,7 +18,7 @@ locals {
     "ErrorSyntax1",
     "eyemono-moe",
     "Galvatron4",
-    "H1rono",
+    # "H1rono", admin
     "HARUKA0219",
     "hayatroid",
     "helgev-traP",
@@ -31,7 +31,7 @@ locals {
     "inutamago-dogegg",
     "Irori235",
     "itt828",
-    "kaitoyama",
+    # "kaitoyama", admin
     "Kaki256",
     "kamaboko720",
     "karo1111111",
@@ -70,7 +70,7 @@ locals {
     "SSlime-s",
     "sumirinn",
     "Synori",
-    "Takeno-hito",
+    # "Takeno-hito", admin
     "taxfree-python",
     "Thunder32768",
     "tkr-555",

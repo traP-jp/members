@@ -1,17 +1,19 @@
 locals {
   teams = {
     "cpp-tutorial" = {
-      members     = ["hijiki51", "saiten", "zer0-star", "n-kegra"]
+      members     = ["hijiki51", "saitenntaisei", "zer0-star", "n-kegra"]
       maintainers = ["H1rono"]
+      description = "C++ チュートリアルプロジェクト"
     }
 
     "Stellagate" = {
-      memebrs = [
-        "pikachu0310", "soramea", "zer0-star", "kisepichu", "cobalt1024", "beferia",
+      members = [
+        "yukikurage", "pikachu0310", "soramea", "zer0-star", "kisepichu", "cobalt1024", "beferia",
         "Kaki256", "s9-sukyu", "uz4ki", "saltbread1", "Thunder32768", "tkr-555",
         "inutamago-dogegg", "alter334", "yuchi-cpu", "sh0go07", "Nors5648", "Synori"
       ]
-      maintainers = ["yukikurage"]
+      maintainers = []
+      description = "Stellagate のチーム"
     }
 
     "Poker" = {
@@ -26,8 +28,9 @@ locals {
     }
 
     "git-lecture" = {
-      members     = ["cp-20", "ras0q", "mehm8128", "Pugma"]
+      members     = ["cp-20", "ras0q", "mehm8128", "Pugma", "TwoSquirrels"]
       maintainers = ["Takeno-hito", "H1rono"]
+      description = "Git 講習会チーム"
     }
 
     "RogueRategy" = {
@@ -38,6 +41,7 @@ locals {
     "hackathon_21_spring" = {
       members     = []
       maintainers = ["ras0q"]
+      description = "2021春ハッカソン"
     }
   }
 }

@@ -4,8 +4,7 @@ module "h23s_parent_team" {
   team_name   = "hackathon_23_spring"
   members     = local.h23s_parent.members
   maintainers = local.h23s_parent.maintainers
-
-  github_owner = local.github_owner
+  description = "2023春ハッカソン"
 }
 
 module "h23s_children_teams" {
@@ -15,21 +14,20 @@ module "h23s_children_teams" {
   team_name   = each.key
   members     = each.value.members
   maintainers = each.value.maintainers
+  description = contains(keys(each.value), "description") ? each.value.description : ""
 
   parent_id = module.h23s_parent_team.team_id
-
-  github_owner = local.github_owner
 }
 
 
 locals {
   h23s_parent = {
     members = [
-      "trasta298", "saitenntaisei", "kenken714", "Galvatron4", "kisepichu",
+      "saitenntaisei", "kenken714", "Galvatron4", "kisepichu",
       "topaz13", "Sokugame", "cp-20", "oribe1115", "abap34", "itt828",
       "NagatsukiSep", "SSlime-s", "Kaki256", "aya-se", "ras0q", "toshi-pono",
       "mehm8128", "Irori235", "Apple000001", "mathsuky", "SakuAs0",
-      "ikura-hamu", "iChemy", "Sotatsu57", "Luftalian", "mizoreyuki8",
+      "ikura-hamu", "Sotatsu57", "Luftalian", "mizoreyuki8",
       "karo1111111", "Ayaka-mogumogu", "hayatroid", "alter334", "ramdos0207",
       "pirosiki197", "24take", "Hueter57", "Kein1048596", "Pugma", "usomatsu",
       "Yuki-Ots", "SakanoYuito", "hinamas2004", "sumirinn", "kamaboko720",
@@ -48,17 +46,20 @@ locals {
       members     = ["NagatsukiSep", "hinamas2004"]
       maintainers = ["SakuAs0"]
     }
-    "h23_06" = {
+    "h23s_06" = {
       members     = []
       maintainers = ["kenken714", "H1rono", "Kaki256", "sumirinn", "kamaboko720"]
+      description = "チーム6"
     }
     "h23s_07" = {
       members     = ["Galvatron4", "eran1515", "penguin23-001"]
       maintainers = ["topaz13", "Kein1048596", "tobuhitodesu"]
+      description = "チーム7"
     }
     "h23s_08" = {
       members     = []
       maintainers = ["kisepichu", "SSlime-s", "Ayaka-mogumogu", "hayatroid", "Nzt3-gh"]
+      description = "2023 春ハッカソン 23 チーム 8"
     }
     "h23s_11" = {
       members     = []

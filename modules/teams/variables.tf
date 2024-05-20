@@ -1,8 +1,3 @@
-variable "github_owner" {
-  description = "The owner of the GitHub organization."
-  type        = string
-}
-
 variable "team_name" {
   type        = string
   description = "Team name"
@@ -21,5 +16,17 @@ variable "maintainers" {
 variable "parent_id" {
   type        = string
   description = "Parent team ID"
+  default     = ""
+}
+
+variable "secret" {
+  type        = bool
+  description = "Secret team is not visible for organization members."
+  default     = false
+}
+
+variable "description" {
+  type        = string
+  description = "Team description"
   default     = ""
 }
