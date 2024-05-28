@@ -1,0 +1,46 @@
+name: "Terraform plan"
+
+on:
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set GCP credentials
+        run: echo ${{ secrets.GCP_CREDENTIALS }} > ./gcp_credentials.json
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.8.4
+
+      - name: Terraform init
+        run: terraform init
+
+      - name: Terraform validate
+        run: terraform validate
+
+      - name: Terraform fmt
+        run: terraform fmt -check -diff -recursive .
+
+      - name: Terraform plan
+        id: plan
+        run: terraform plan
+
+      - name: Comment PR
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.issues.createComment({
+              issue_number: context.payload.pull_request.number,,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '```' + {{ steps.plan.outputs }} + '```'
+            })
