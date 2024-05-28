@@ -27,14 +27,14 @@ locals {
       "topaz13", "Sokugame", "cp-20", "oribe1115", "abap34", "itt828",
       "NagatsukiSep", "SSlime-s", "Kaki256", "aya-se", "ras0q", "toshi-pono",
       "mehm8128", "Irori235", "Apple000001", "mathsuky", "SakuAs0",
-      "ikura-hamu", "Sotatsu57", "Luftalian", "mizoreyuki8",
+      "Sotatsu57", "Luftalian", "mizoreyuki8",
       "karo1111111", "Ayaka-mogumogu", "hayatroid", "alter334", "ramdos0207",
       "pirosiki197", "24take", "Hueter57", "Kein1048596", "Pugma", "usomatsu",
       "Yuki-Ots", "SakanoYuito", "hinamas2004", "sumirinn", "kamaboko720",
       "Aketami23", "tobuhitodesu", "Wertsatz", "eran1515", "Akira-256",
       "penguin23-001", "emura0", "Nzt3-gh", "Kuryu025"
     ]
-    maintainers = ["Takeno-hito", "H1rono"]
+    maintainers = ["Takeno-hito", "H1rono", "ikura-hamu"]
   }
 
   h23s_children = {

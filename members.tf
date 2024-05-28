@@ -26,7 +26,7 @@ locals {
     "hinamas2004",
     "Hueter57",
     "iChemy",
-    "ikura-hamu",
+    # "ikura-hamu", admin
     "Imperi13",
     "inutamago-dogegg",
     "Irori235",
@@ -34,6 +34,7 @@ locals {
     # "kaitoyama", admin
     "Kaki256",
     "kamaboko720",
+    "kanibaku",
     "karo1111111",
     "Kein1048596",
     "kenken714",
@@ -78,6 +79,7 @@ locals {
     "topaz13",
     "toshi-pono",
     "trasta298",
+    "TwoSquirrels",
     "usomatsu",
     "uz4ki",
     "vPhos",

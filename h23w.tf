@@ -23,10 +23,10 @@ locals {
   h23w_parent = {
     members = [
       "zer0-star", "itt828", "eyemono-moe", "Kaki256", "oER4",
-      "mehm8128", "mathsuky", "ikura-hamu", "hayatroid", "alter334",
+      "mehm8128", "mathsuky", "hayatroid", "alter334",
       "comavius", "ramdos0207", "pirosiki197", "Pugma", "yukikurage",
     ]
-    maintainers = ["Takeno-hito", "kaitoyama", "H1rono"]
+    maintainers = ["Takeno-hito", "kaitoyama", "H1rono", "ikura-hamu"]
   }
 
   h23w_children = {

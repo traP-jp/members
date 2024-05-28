@@ -8,11 +8,11 @@ locals {
 
     "Stellagate" = {
       members = [
-        "yukikurage", "pikachu0310", "soramea", "zer0-star", "kisepichu", "cobalt1024", "beferia",
+        "pikachu0310", "soramea", "zer0-star", "kisepichu", "cobalt1024", "beferia",
         "Kaki256", "s9-sukyu", "uz4ki", "saltbread1", "Thunder32768", "tkr-555",
-        "inutamago-dogegg", "alter334", "yuchi-cpu", "sh0go07", "Nors5648", "Synori"
+        "inutamago-dogegg", "alter334", "yuchi-cpu", "sh0go07", "Nors5648", "Synori", "kanibaku",
       ]
-      maintainers = []
+      maintainers = ["yukikurage"]
       description = "Stellagate のチーム"
     }
 
