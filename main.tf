@@ -10,6 +10,12 @@ terraform {
       version = "~>6.0"
     }
   }
+
+  backend "gcs" {
+    bucket      = "trap-tfstate"
+    prefix      = "trap-community-terraform"
+    credentials = "google_credentials.json"
+  }
 }
 
 provider "github" {
