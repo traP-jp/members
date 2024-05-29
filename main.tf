@@ -12,9 +12,9 @@ terraform {
   }
 
   backend "gcs" {
-    bucket      = "trap-tfstate"
-    prefix      = "trap-community-terraform"
-    credentials = "google_credentials.json"
+    bucket = "trap-tfstate"
+    prefix = "trap-community-terraform"
+    # credentials = "google_credentials.json"
   }
 }
 
