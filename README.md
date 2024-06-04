@@ -4,8 +4,8 @@ Organization メンバー・チーム管理用 Terraform
 
 Terraform v1系を使うこと
 
-GitHub Organizationについて https://docs.github.com/ja/organizations/collaborating-with-groups-in-organizations/about-organizations
-Terraformについて https://www.terraform.io/
+- GitHub Organizationについて https://docs.github.com/ja/organizations/collaborating-with-groups-in-organizations/about-organizations
+- Terraformについて https://www.terraform.io/
 
 ディレクトリ構成
 
