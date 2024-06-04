@@ -37,3 +37,7 @@ module "members" {
 
   members = local.members
 }
+
+module "hackathon" {
+  source = "./hackathon"
+}
