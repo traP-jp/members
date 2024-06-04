@@ -12,9 +12,12 @@ Terraform v1系を使うこと
 ```txt
 .
 ├── README.md
-├── h23s.tf # ハッカソンのチーム。毎回ファイルを作っている
-├── h23w.tf
-├── main.tf # providerの設定やteams.tf, members.tfを取り込んでの実行
+├── docs
+│   └── image.png
+├── hackathon # ハッカソン用の設定
+│   ├── h23s.tf
+│   └── h23w.tf
+├── main.tf # providerの設定やteams.tf, members.tf, hackathon以下を取り込んでの実行
 ├── members.tf # orgのメンバー管理
 ├── modules # モジュール
 │   ├── members # orgのメンバー
@@ -68,16 +71,17 @@ Organizationのadminかどうかは手動で管理してください。
 
 そもそもチームそのものはOrganizationの外からは見えないので、このOrganizationでsecretにする意味はあまりない気がします。
 
-### 親子関係のある複数のチームを追加したい
+### 親子関係のある複数のチームを追加したい(ハッカソンなど)
 
-チームの数にもよりますが、新しくファイルを作るとわかりやすいと思います。ハッカソンで使うことを想定しています。
-[`h23s.tf`](./h23s.tf)などを参考にしてください。
+チームの数にもよりますが、新しくファイルを作るとわかりやすいと思います。[`hackathon/h23s.tf`](./hackathon/h23s.tf)などを参考にしてください。
 
-下の例は、`xxx-team`というチームの下に`xxx_01`と`xxx_02`というチームを作る設定です。
+ハッカソン用の設定は[`hackathon`](./hackathon/)フォルダに書かれています。ハッカソンの設定を追加したい場合はこのフォルダの中、それ以外の親子関係のあるチームを作りたい場合はリポジトリルートに、ファイルを作成してください。ファイルの書き方はどちらもほぼ共通です。ただし、**`module`の中の`source`の相対パスが変わるので注意してください。**
+
+下の例は、リポジトリルートで、`xxx-team`というチームの下に`xxx_01`と`xxx_02`というチームを作る設定です。
 
 ```tf
 module "xxx_parent_team" {
-  source = "./modules/teams"
+  source = "./modules/teams" # hackathonフォルダの下であれば、 "../modules/teams" にする
 
   team_name   = "xxx-team" # 親チーム名
   members     = local.xxx_parent.members
@@ -87,7 +91,7 @@ module "xxx_parent_team" {
 
 module "xxx_children_teams" {
   for_each = local.xxx_children
-  source   = "./modules/teams"
+  source   = "./modules/teams" # hackathonフォルダの下であれば、 "../modules/teams" にする
 
   team_name   = each.key
   members     = each.value.members
