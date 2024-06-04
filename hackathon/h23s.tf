@@ -1,5 +1,5 @@
 module "h23s_parent_team" {
-  source = "./modules/teams"
+  source = "../modules/teams"
 
   team_name   = "hackathon_23_spring"
   members     = local.h23s_parent.members
@@ -9,7 +9,7 @@ module "h23s_parent_team" {
 
 module "h23s_children_teams" {
   for_each = local.h23s_children
-  source   = "./modules/teams"
+  source   = "../modules/teams"
 
   team_name   = each.key
   members     = each.value.members
