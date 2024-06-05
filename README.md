@@ -52,7 +52,18 @@ Organizationのadminかどうかは手動で管理してください。
 
 ### Organizationにメンバーを追加・削除したい
 
-リポジトリルートの[`members.tf`](./members.tf)を編集します。`members`の配列の中にGitHubのIDを追加してください。アルファベット順にするとわかりやすいです。
+リポジトリルートの[`members.tf`](./members.tf)を編集します。`members`の配列の中にGitHubのIDを追加し、横にコメントでtraQのIDを併記してください。アルファベット順にするとわかりやすいです。
+
+```tf
+locals {
+  members = [
+    "ikura-hamu", # ikura-hamu
+    "H1rono", # H1rono_K
+  ]
+}
+```
+
+運用の初期はtraQのIDが無い場合もあります。適宜書き足していってください。
 
 ### 親子関係の無いチームを1つ追加したい
 
