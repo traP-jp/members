@@ -13,7 +13,43 @@ permissions:
 concurrency:
   group: terraform
 
+env:
+  TRRAFORM_VERSION: "1.8.4"
+
 jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: ${{ env.TRRAFORM_VERSION }}
+
+      - name: Terraform init
+        run: terraform init
+        env:
+          GOOGLE_BACKEND_CREDENTIALS: ${{ secrets.GOOGLE_BACKEND_CREDENTIALS }}
+
+      - name: Terraform validate
+        run: terraform validate -no-color
+
+  fmt:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: ${{ env.TRRAFORM_VERSION }}
+
+      - name: Terraform fmt
+        run: terraform fmt -check -diff -recursive .
+
   plan:
     runs-on: ubuntu-latest
     steps:
@@ -23,20 +59,10 @@ jobs:
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
         with:
-          terraform_version: "1.8.4"
+          terraform_version: ${{ env.TRRAFORM_VERSION }}
 
       - name: Terraform init
         run: terraform init
-        env:
-          GOOGLE_BACKEND_CREDENTIALS: ${{ secrets.GOOGLE_BACKEND_CREDENTIALS }}
-
-      - name: Terraform validate
-        run: terraform validate -no-color
-        env:
-          GOOGLE_BACKEND_CREDENTIALS: ${{ secrets.GOOGLE_BACKEND_CREDENTIALS }}
-
-      - name: Terraform fmt
-        run: terraform fmt -check -diff -recursive .
         env:
           GOOGLE_BACKEND_CREDENTIALS: ${{ secrets.GOOGLE_BACKEND_CREDENTIALS }}
 
