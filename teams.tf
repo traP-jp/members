@@ -1,6 +1,7 @@
 locals {
   teams = {
     "admin" = {
+      members = []
       maintainers = ["kaitoyama", "H1rono", "ikura-hamu", "Takeno-hito"]
       description = "traP-jp organization Admin"
     },
