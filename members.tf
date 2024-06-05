@@ -26,7 +26,7 @@ locals {
     "hinamas2004",
     "Hueter57",
     "iChemy",
-    # "ikura-hamu", admin
+    # "ikura-hamu", #ikura-hamu admin
     "Imperi13",
     "inutamago-dogegg",
     "Irori235",
