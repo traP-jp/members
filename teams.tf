@@ -24,7 +24,6 @@ locals {
     "Poker" = {
       members     = ["20jun01", "HARUKA0219"]
       maintainers = ["Takeno-hito", "topaz13"]
-
     }
 
     "pg-basic-contributor" = {

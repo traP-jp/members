@@ -1,13 +1,13 @@
-# members
+# traP-jp members
 
-Organization メンバー・チーム管理用 Terraform
+traP-jp Organization のメンバー・チームを管理する Terraform
 
-Terraform v1系を使うこと
+Terraform v1系を使用しています。
 
 - GitHub Organizationについて https://docs.github.com/ja/organizations/collaborating-with-groups-in-organizations/about-organizations
 - Terraformについて https://www.terraform.io/
 
-ディレクトリ構成
+## ディレクトリ構成
 
 ```txt
 .
@@ -32,27 +32,34 @@ Terraform v1系を使うこと
 └── teams.tf # 親子関係の無いチーム
 ```
 
-## 使い方
+## 仕組み
 
-Organizationのメンバーを変更したり、チームを変更したりするために使います。
+Organization のメンバー・チーム情報をコードで一元管理し、反映を GitHub Actions と Google Cloud Storage を用いて行います。
 
-1. 変更を加える
-2. mainブランチへのプルリクエストを出すと、GitHub Actionsで以下の処理が行われる
-   1. `terraform validate` 文法が正しいかを調べる
-   2. `terraform fmt` フォーマットが正しいかを調べる
-   3. `terraform plan`  どのような変更が加えられたのかを調べる
-   4. 3の結果をPRにコメントする
-3. 2が成功したらadminがレビューする
-4. approveされたらマージする
-5. マージされると、GitHub Actionsで`terraform apply`が実行され、変更が反映される
+### 流れ
 
-Organizationのadminかどうかは手動で管理してください。
+1. mainブランチへのプルリクエストを出すと、GitHub Actions で以下がチェックされる
+   1. `terraform validate`
+   2. `terraform fmt`
+   3. `terraform plan`
+2. `plan` の結果が自動的にコメントされる
+3. Admin がレビューする
+4. マージされたタイミングで `terraform apply` が実行され、変更が反映される
 
-具体例を書きます。基本的にはリポジトリルートのファイルのみ編集すれば十分です。
+## Contributing Guide
 
-### Organizationにメンバーを追加・削除したい
+::: warning
 
-リポジトリルートの[`members.tf`](./members.tf)を編集します。`members`の配列の中にGitHubのIDを追加し、横にコメントでtraQのIDを併記してください。アルファベット順にするとわかりやすいです。
+Organization の Admin は terraform では管理せず、手動で管理しています。
+詳細は「Organization の admin を追加したい」セクションを確認してください。
+
+:::
+
+### Organization のメンバーを編集する
+
+リポジトリルートの[`members.tf`](./members.tf) を編集してください。
+`members`の配列の中にGitHubのIDを追加し、横にコメントでtraQのIDを併記してください。
+可能ならアルファベット順にすることが望ましいですが、PRの要件とはしません。
 
 ```tf
 locals {
@@ -63,32 +70,42 @@ locals {
 }
 ```
 
-運用の初期はtraQのIDが無い場合もあります。適宜書き足していってください。
+一部コメントで traQ の ID が記載されていないメンバーが居ますが、これは terraform での管理前に追加されたメンバーです。
+適宜コメントを追加していただけると助かります。
 
-### 親子関係の無いチームを1つ追加したい
+### 新しくチームを作成する
 
-[`teams.tf`](./teams.tf)を編集します。`teams`の中に以下のようなデータを追加します。
+#### 単独のチームを作成する場合（小規模なプロジェクトなど）
+
+[`teams.tf`](./teams.tf) の `teams` の中に以下のように追記してください。
 
 ```tf
 "team-name" = {
   members = ["aaa", "bbb"] # チームのメンバーのGitHub ID
   maintainers = ["ccc", "ddd"] # チームのメンテナーGitHub ID
-  description = "チームの説明"
-  secret = false # 公開されているチームかどうか。デフォルトはfalse(公開)
+  description = "チームの説明" # optional だがチーム名から推測し辛い場合は記載すること
+  secret = false # Organization 内に公開されているチームか否か。デフォルトはfalse（公開）
 }
 ```
 
-打ち間違いすると動かないので、コピペがおすすめです。
+`secret` について：チーム情報全体が Public Repository で運用されていることから traP-jp organization でチームを secret にする理由はあまりないと考えていますが、判断は個々人に委ねられます。
 
-そもそもチームそのものはOrganizationの外からは見えないので、このOrganizationでsecretにする意味はあまりない気がします。
+#### チームの中にチームを作成する想定の場合　（ハッカソンのチームなど）
 
-### 親子関係のある複数のチームを追加したい(ハッカソンなど)
+チームの数にもよりますが、基本的にファイルを分けて記述してください。
 
-チームの数にもよりますが、新しくファイルを作るとわかりやすいと思います。[`hackathon/h23s.tf`](./hackathon/h23s.tf)などを参考にしてください。
+ファイルの記述方法は [`hackathon/h23s.tf`](./hackathon/h23s.tf) を参考にしてください。
 
-ハッカソン用の設定は[`hackathon`](./hackathon/)フォルダに書かれています。ハッカソンの設定を追加したい場合はこのフォルダの中、それ以外の親子関係のあるチームを作りたい場合はリポジトリルートに、ファイルを作成してください。ファイルの書き方はどちらもほぼ共通です。ただし、**`module`の中の`source`の相対パスが変わるので注意してください。**
+ファイルの作成場所は以下に従ってください。
 
-下の例は、リポジトリルートで、`xxx-team`というチームの下に`xxx_01`と`xxx_02`というチームを作る設定です。
+- ハッカソンの設定を追加したい場合：`hackathon` フォルダ内
+- それ以外の親子関係のあるチームを作りたい場合：リポジトリルート
+
+記述方法はどちらも基本的に共通です。ただし、**`module` の `source` は相対パス** です。ご注意ください。
+
+##### sample
+
+`xxx-team`というチームの下に`xxx_01`と`xxx_02` というチームを作成する場合（リポジトリルート下に設置）
 
 ```tf
 module "xxx_parent_team" {
@@ -114,43 +131,44 @@ module "xxx_children_teams" {
 
 locals {
   xxx_parent = {
-    members = ["aaa", "bbb", "ccc", "ddd"] # 親チームのメンバーのGitHub ID
-    maintainers = ["eee"] # 子チームのメンバーのGitHub ID
+    members = ["aaa", "bbb", "ccc", "ddd"] # 親チームのメンバーの GitHub ID
+    maintainers = ["eee"] # 親チームのメンテナーの GitHub ID
   }
 
   xxx_children = {
     "xxx_01" = {
       members     = []
       maintainers = ["aaa", "bbb"]
-      description = "チーム01"  # チームの説明(optional)
+      description = "チーム01"
     }
 
     "xxx_02" = {
       members     = ["ccc"]
       maintainers = ["ddd"]
-      secret = true # 公開されているチームかどうか(optional)
+      secret = true
     }
   }
 }
 ```
 
-3階層以上の親子関係も作れなくはないです。
+3階層以上の親子関係も作成しようと思えば作成可能です。
 
-### Organizationのadminを追加したい
+### Organizationの admin を追加したい
 
-2回PRを出してください。
+admin のみ terraform で管理しない運用をするため、煩雑な手順を踏んています。
 
-1. [`members.tf`](./members.tf)から、新しいAdminのIDを消します。(コメントアウトしてadminって書いておくといいかも)
-2. 1のPRがマージされると、Orgからその人がいなくなるので、GitHubのUIから招待し直して、adminにします。
-3. 新しいAdminが所属しているチームについて、チームのmembersに含まれている場合は、tfファイルを編集して、すべてmaintainersにします。
-   これは、OrgのAdminはチームに所属すると必ずmaintainerになるというGitHubの仕様に従ったものです。
+1. [`members.tf`](./members.tf) から、新しく Admin になるユーザーをコメントアウトし、その上 admin と分かるようにコメントを追記してください。
+2. 1 の PR を作成し main に反映させてください。
+3. 既存の Admin が github.com の UI 上から新しい admin を招待し、 admin に登録してください。
+4. 新しい Admin が所属しているチームについて、チームのmembersに含まれている場合は、tfファイルを編集して、すべてmaintainersにしてください。
+   - OrgのAdminはチームに所属すると必ずmaintainerになるという GitHub の仕様に合わせるためです。
 
 ### Organizationのadminを普通のmemberにしたい
 
-1. [Organizationにメンバーを追加・削除したい](#organizationにメンバーを追加削除したい)と同様に[`members.tf`](./members.tf)に追加します。
-2. チームのmaintainerから外したい場合は、それぞれmaintainersからmembersに移動させます。
+1. [Organization のメンバーを編集する](#Organization のメンバーを編集する) と同様に [`members.tf`](./members.tf) に追加してください。
+2. チームのmaintainerから外したい場合は、それぞれmaintainersからmembersに移動させてください。
 
-## 管理者向け
+## Admin 向け
 
 Terraformのバックエンドとして、SysAd班のGCPアカウントのGoogle Cloud Storageの`trap-tfstate`というバケットを使用しています。
 
@@ -158,8 +176,8 @@ GitHub Actionsには`PERSONAL_TOKEN`と`GOOGLE_BACKEND_CREDENTIALS`の二つのs
 
 - `PERSONAL_TOKEN`
   - **Adminの誰かの**GitHubのFine-grained token
-  - OrganizationのmembersへのRead,Write権限が必要
-  - こうなってればok
+  - Organization の members への Read,Write 権限が必要
+  - 以下のようになっていれば OK
   ![Organization permissionsのところにRead and Write access to membersと書かれている](docs/image.png)
 - `GOOGLE_BACKEND_CREDENTIALS`
-  - GCSのcredential情報
+  - GCS の credential 情報
