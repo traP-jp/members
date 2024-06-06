@@ -132,7 +132,7 @@ module "xxx_children_teams" {
 locals {
   xxx_parent = {
     members = ["aaa", "bbb", "ccc", "ddd"] # 親チームのメンバーの GitHub ID
-    maintainers = ["eee"] # 子チームのメンバーの GitHub ID
+    maintainers = ["eee"] # 親チームのメンテナーの GitHub ID
   }
 
   xxx_children = {
