@@ -40,6 +40,7 @@ locals {
     "kenken714",     # kenken
     "kisepichu",     # tqk
     "Kuryu025",      # Kuryu
+    "Liscome",       # Liscome
     "Luftalian",     # Luftalian
     "mathsuky",      # masky5859
     "mehm8128",      # mehm8128
@@ -54,6 +55,7 @@ locals {
     "penguin23-001", # penguin23
     "pikachu0310",   # pikachu
     "pirosiki197",   # pirosiki
+    "PL-38",         # PL-38
     "Pugma",         # Pugma
     "ramdos0207",    # ramdos
     "ras0q",         # Ras
