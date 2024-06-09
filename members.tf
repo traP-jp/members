@@ -40,6 +40,7 @@ locals {
     "kenken714",
     "kisepichu",
     "Kuryu025",
+    "Liscome", # Liscome
     "Luftalian",
     "mathsuky",
     "mehm8128",
@@ -54,6 +55,7 @@ locals {
     "penguin23-001",
     "pikachu0310",
     "pirosiki197",
+    "PL-38", # PL-38
     "Pugma",
     "ramdos0207",
     "ras0q",
