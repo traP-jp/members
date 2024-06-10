@@ -7,6 +7,8 @@ locals {
     "Akira-256",      # Akira_256
     "alter334",       # Alt--er
     "Apple000001",    # Apple
+    "aster34",        # Aster
+    "ayanakm",        # ayana
     "aya-se",         # aya_se
     "Ayaka-mogumogu", # mogumogu1515
     "beferia",        # beferia
@@ -46,7 +48,9 @@ locals {
     "mehm8128",      # mehm8128
     "miko-misa",     # hacnosuke
     "mizoreyuki8",   # mizoreyuki
+    "mtaku3",        # mtaku3
     "n-kegra",       # kegra
+    "nagaeki",       # eki
     "NagatsukiSep",  # Z
     "Nors5648",      # Nors5648
     "Nzt3-gh",       # Nzt3

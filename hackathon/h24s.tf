@@ -28,6 +28,10 @@ locals {
   }
 
   h24s_children = {
+    "h24s_16" = {
+      members     = ["ayanakm", "nagaeki", "trasta298", "mtaku3", "aster34"]
+      maintainers = ["Pugma"]
+    },
     "h24s_17" = {
       members     = ["ErrorSyntax1", "Liscome", "PL-38"]
       maintainers = ["itt828", "H1rono"]
