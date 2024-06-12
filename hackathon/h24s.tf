@@ -22,13 +22,20 @@ module "h24s_children_teams" {
 locals {
   h24s_parent = {
     members = [
-      "aster34", "ayanakm", "blancnoir256", "ErrorSyntax1", "Liscome", "H1rono", "itt828",
-      "kamecha", "karo1111111", "Kuh456", "mtaku3", "nagaeki", "PL-38", "Pugma", "trasta298"
+      "alter334", "aster34", "ayanakm", "blancnoir256", "ErrorSyntax1", "hyde616", "Liscome",
+      "H1rono", "itt828", "kamecha", "karo1111111", "kn-tech", "Kuh456", "mehm8128", "mtaku3",
+      "nagaeki", "noya2ruler", "PL-38", "Pugma", "trasta298"
     ]
     maintainers = ["Takeno-hito", "kaitoyama", "H1rono", "ikura-hamu"]
   }
 
   h24s_children = {
+    "h24s_04" = {
+      members = []
+      maintainers = [
+        "alter334", "hyde616", "kn-tech", "mehm8128", "noya2ruler"
+      ]
+    }
     "h24s_16" = {
       members = []
       maintainers = [

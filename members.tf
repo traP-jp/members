@@ -28,6 +28,7 @@ locals {
     "hijiki51",    # hijiki51
     "hinamas2004", # hinamas2004
     "Hueter57",    # Hueter
+    "hyde616",     # Hyde_616
     "iChemy",      # iChemy
     # "ikura-hamu", # ikura-hamu admin
     "Imperi13",         # Imperi
@@ -43,6 +44,7 @@ locals {
     "Kein1048596",     # Kein
     "kenken714",       # kenken
     "kisepichu",       # tqk
+    "kn-tech",         # koki_10
     "Kuh456",          # Kuh
     "Kuryu025",        # Kuryu
     "Liscome",         # Liscome
@@ -57,6 +59,7 @@ locals {
     "nagaeki",         # eki
     "NagatsukiSep",    # Z
     "Nors5648",        # Nors5648
+    "noya2ruler",      # noya2
     "Nzt3-gh",         # Nzt3
     "oER4",            # o_ER4
     "oribe1115",       # oribe
