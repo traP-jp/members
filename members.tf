@@ -22,6 +22,7 @@ locals {
     "ryerust",        # michadaniel
     "ErrorSyntax1",   # SyntaxError
     "eyemono-moe",    # d_etteiu8383
+    "Futadaruma",     # Futadaruma
     "Galvatron4",     # Nek0yanag1
     # "H1rono",     # H1rono_K admin
     "HARUKA0219",  # HARUKA
@@ -56,6 +57,7 @@ locals {
     "miko-misa",       # hacnosuke
     "mirin-mochigome", # mirin
     "mizoreyuki8",     # mizoreyuki
+    "motoki317",       # toki
     "mtaku3",          # mtaku3
     "n-kegra",         # kegra
     "nagaeki",         # eki
@@ -74,12 +76,14 @@ locals {
     "ramdos0207",      # ramdos
     "ras0q",           # Ras
     "reiroop",         # rei
+    "riku6174",        # riku_6174
     "s9-sukyu",        # s9
     "saitenntaisei",   # saiten
     "SakanoYuito",     # shirasu_oisi
     "SakuAs0",         # SakuAs
     "saltbread1",      # take
     "sea314",          # sea314
+    "Series-205",      # Series_205
     "sh0go07",         # shogotin
     "Sokugame",        # sokugame
     "soramea",         # soramea
