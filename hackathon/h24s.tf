@@ -23,10 +23,10 @@ locals {
   h24s_parent = {
     members = [
       "alex3333python", "alter334", "aster34", "ayanakm", "blancnoir256", "ErrorSyntax1",
-      "Futadaruma", "eyerust", "hyde616", "Liscome", "H1rono", "itt828", "kamecha", "karo1111111",
-      "kn-tech", "Kuh456", "mathsuky", "mehm8128", "motoki317", "mtaku3", "nagaeki", "Nattuki",
-      "noya2ruler", "PL-38", "Pugma", "reiroop", "riku6174", "Series-205", "trasta298", "ultsaza",
-      "zer0-star"
+      "Futadaruma", "eyerust", "H1rono", "hyde616", "itt828", "jippo-m", "kamecha", "karo1111111",
+      "kn-tech", "Kuh456", "Liscome", "Luftalian", "mathsuky", "mehm8128", "motoki317", "mtaku3",
+      "nagaeki", "Nattuki", "nokhnaton", "noya2ruler", "ogu-kazemiya", "pippi0057", "pirosiki197",
+      "PL-38", "Pugma", "reiroop", "riku6174", "Series-205", "trasta298", "ultsaza", "zer0-star"
     ]
     maintainers = ["Takeno-hito", "kaitoyama", "H1rono", "ikura-hamu"]
   }
@@ -36,6 +36,12 @@ locals {
       members = []
       maintainers = [
         "alter334", "hyde616", "kn-tech", "mehm8128", "noya2ruler"
+      ]
+    }
+    "h24s_10" = {
+      members = []
+      maintainers = [
+        "jippo-m", "Luftalian", "nokhnaton", "ogu-kazemiya", "pippi0057", "pirosiki197"
       ]
     }
     "h24s_13" = {

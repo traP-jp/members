@@ -38,6 +38,7 @@ locals {
     "inutamago-dogegg", # inutamago_dogegg
     "Irori235",         # irori
     "itt828",           # itt
+    "jippo-m",          # jippo
     # "kaitoyama",  # kaitoyama admin
     "Kaki256",         # Pina641
     "kamaboko720",     # Kamaboko
@@ -63,13 +64,16 @@ locals {
     "nagaeki",         # eki
     "NagatsukiSep",    # Z
     "Nattuki",         # Natsuki
+    "nokhnaton",       # noc7t
     "Nors5648",        # Nors5648
     "noya2ruler",      # noya2
     "Nzt3-gh",         # Nzt3
     "oER4",            # o_ER4
+    "ogu-kazemiya",    # ogu_kazemiya
     "oribe1115",       # oribe
     "penguin23-001",   # penguin23
     "pikachu0310",     # pikachu
+    "pippi0057",       # pippi0057
     "pirosiki197",     # pirosiki
     "PL-38",           # PL-38
     "Pugma",           # Pugma
