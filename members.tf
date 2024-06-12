@@ -26,6 +26,7 @@ locals {
     "Galvatron4",     # Nek0yanag1
     # "H1rono",     # H1rono_K admin
     "HARUKA0219",  # HARUKA
+    "hatchch",     # Hatch
     "hayatroid",   # hayatroid
     "helgev-traP", # helgev
     "hijiki51",    # hijiki51
@@ -53,6 +54,7 @@ locals {
     "Kuryu025",        # Kuryu
     "Liscome",         # Liscome
     "Luftalian",       # Luftalian
+    "Luke256",         # Luke256
     "mathsuky",        # masky5859
     "mehm8128",        # mehm8128
     "miko-misa",       # hacnosuke
@@ -72,6 +74,7 @@ locals {
     "ogu-kazemiya",    # ogu_kazemiya
     "oribe1115",       # oribe
     "penguin23-001",   # penguin23
+    "Pentakon",        # Pentakon
     "pikachu0310",     # pikachu
     "pippi0057",       # pippi0057
     "pirosiki197",     # pirosiki
