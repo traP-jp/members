@@ -19,7 +19,7 @@ locals {
     "cp-20",          # cp20
     "emura0",         # emura
     "eran1515",       # Eran
-    "ryerust",        # michadaniel
+    "eyerust",        # michadaniel
     "ErrorSyntax1",   # SyntaxError
     "eyemono-moe",    # d_etteiu8383
     "Futadaruma",     # Futadaruma
