@@ -5,6 +5,7 @@ locals {
     "abap34",         # abap34
     "Aketami23",      # aketami
     "Akira-256",      # Akira_256
+    "alex3333python", # alex_python
     "alter334",       # Alt--er
     "Apple000001",    # Apple
     "aster34",        # Aster
@@ -18,6 +19,7 @@ locals {
     "cp-20",          # cp20
     "emura0",         # emura
     "eran1515",       # Eran
+    "ryerust",        # michadaniel
     "ErrorSyntax1",   # SyntaxError
     "eyemono-moe",    # d_etteiu8383
     "Galvatron4",     # Nek0yanag1
@@ -58,6 +60,7 @@ locals {
     "n-kegra",         # kegra
     "nagaeki",         # eki
     "NagatsukiSep",    # Z
+    "Nattuki",         # Natsuki
     "Nors5648",        # Nors5648
     "noya2ruler",      # noya2
     "Nzt3-gh",         # Nzt3
@@ -70,6 +73,7 @@ locals {
     "Pugma",           # Pugma
     "ramdos0207",      # ramdos
     "ras0q",           # Ras
+    "reiroop",         # rei
     "s9-sukyu",        # s9
     "saitenntaisei",   # saiten
     "SakanoYuito",     # shirasu_oisi
@@ -93,6 +97,7 @@ locals {
     "toshi-pono",     # toshi00
     "trasta298",      # trasta
     "TwoSquirrels",   # TwoSquirrels
+    "ultsaza",        # kyomu
     "usomatsu",       # usomatsu
     "uz4ki",          # Uzaki
     "vPhos",          # vPhos
