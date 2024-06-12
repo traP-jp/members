@@ -46,7 +46,7 @@ locals {
       ]
     }
     "h24s_13" = {
-      memebers = []
+      members = []
       maintainers = [
         "Futadaruma", "mathsuky", "motoki317", "riku6174", "Series-205"
       ]
