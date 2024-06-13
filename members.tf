@@ -62,6 +62,7 @@ locals {
     "mizoreyuki8",     # mizoreyuki
     "motoki317",       # toki
     "mtaku3",          # mtaku3
+    "mumumu6",         # mumumu
     "n-kegra",         # kegra
     "nagaeki",         # eki
     "NagatsukiSep",    # Z
@@ -92,6 +93,7 @@ locals {
     "sea314",          # sea314
     "Series-205",      # Series_205
     "sh0go07",         # shogotin
+    "shushuya0210",    # eru_o2lo
     "Sokugame",        # sokugame
     "soramea",         # soramea
     "Sotatsu57",       # Sotatsu

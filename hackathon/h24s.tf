@@ -27,7 +27,7 @@ locals {
       "karo1111111", "kn-tech", "Kuh456", "Liscome", "Luftalian", "Luke256", "mathsuky", "mehm8128",
       "motoki317", "mtaku3", "nagaeki", "Nattuki", "nokhnaton", "noya2ruler", "ogu-kazemiya",
       "Pentakon", "pippi0057", "pirosiki197", "PL-38", "Pugma", "reiroop", "riku6174", "Series-205",
-      "Synori", "trasta298", "ultsaza", "zer0-star"
+      "Synori", "trasta298", "ultsaza", "zer0-star", "aya-se", "shushuya0210", "mumumu6"
     ]
     maintainers = ["Takeno-hito", "kaitoyama", "H1rono", "ikura-hamu"]
   }
@@ -66,6 +66,10 @@ locals {
     "h24s_17" = {
       members     = ["ErrorSyntax1", "Liscome", "PL-38"]
       maintainers = ["itt828", "H1rono"]
+    }
+    "h24s_18" = {
+      members     = ["shushuya0210", "mumumu6"]
+      maintainers = ["Takeno-hito", "aya-se"]
     }
     "h24s_21" = {
       members     = []
