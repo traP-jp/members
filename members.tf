@@ -81,6 +81,7 @@ locals {
     "pippi0057",       # pippi0057
     "pirosiki197",     # pirosiki
     "PL-38",           # PL-38
+    "Propromp",        # matsun
     "Pugma",           # Pugma
     "ramdos0207",      # ramdos
     "ras0q",           # Ras
@@ -94,7 +95,9 @@ locals {
     "sea314",          # sea314
     "Series-205",      # Series_205
     "sh0go07",         # shogotin
+    "shibutomo",       # Mozuya
     "shushuya0210",    # eru_o2lo
+    "Silent-Clubstep", # shunapo
     "Sokugame",        # sokugame
     "soramea",         # soramea
     "Sotatsu57",       # Sotatsu
@@ -117,6 +120,7 @@ locals {
     "vPhos",          # vPhos
     "Wertsatz",       # Wert
     "YMAC-STICK",     # YMAC
+    "ynta-3",         # Hokaze
     "yuchi-cpu",      # u
     "yuhima03",       # tidus
     "Yuki-Ots",       # Umin

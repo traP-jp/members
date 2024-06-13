@@ -82,6 +82,11 @@ locals {
       maintainers = ["cp-20", "ikura-hamu"]
     }
 
+    "h24s_25" = {
+      members     = ["Propromp", "ynta-3", "shibutomo", "Silent-Clubstep"]
+      maintainers = ["comavius"]
+    }
+
     "h24s_32" = {
       members = []
       maintainers = [
