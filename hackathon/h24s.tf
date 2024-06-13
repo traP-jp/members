@@ -27,7 +27,8 @@ locals {
       "karo1111111", "kn-tech", "Kuh456", "Liscome", "Luftalian", "Luke256", "mathsuky", "mehm8128",
       "motoki317", "mtaku3", "nagaeki", "Nattuki", "nokhnaton", "noya2ruler", "ogu-kazemiya",
       "Pentakon26", "pippi0057", "pirosiki197", "PL-38", "Pugma", "reiroop", "riku6174", "Series-205",
-      "Synori", "trasta298", "ultsaza", "zer0-star", "aya-se", "shushuya0210", "mumumu6"
+      "Synori", "trasta298", "ultsaza", "zer0-star", "aya-se", "shushuya0210", "mumumu6",
+      "ZOI-dayo", "yuhima03", "cp-20", "AlteraKlam",
     ]
     maintainers = ["Takeno-hito", "kaitoyama", "H1rono", "ikura-hamu"]
   }
@@ -75,6 +76,12 @@ locals {
       members     = []
       maintainers = ["Synori", "Luke256", "hatchch", "Pentakon26"]
     }
+
+    "h24s_24" = {
+      members     = ["AlteraKlam", "ZOI-dayo", "yuhima03"]
+      maintainers = ["cp-20", "ikura-hamu"]
+    }
+
     "h24s_32" = {
       members = []
       maintainers = [

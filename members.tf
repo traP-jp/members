@@ -7,6 +7,7 @@ locals {
     "Akira-256",      # Akira_256
     "alex3333python", # alex_python
     "alter334",       # Alt--er
+    "AlteraKlam",     # Alietty
     "Apple000001",    # Apple
     "aster34",        # Aster
     "aya-se",         # aya_se
@@ -117,9 +118,10 @@ locals {
     "Wertsatz",       # Wert
     "YMAC-STICK",     # YMAC
     "yuchi-cpu",      # u
+    "yuhima03",       # tidus
     "Yuki-Ots",       # Umin
     "yukikurage",     # yukikurage
     "zer0-star",      # zer0-star
-    "ZOI-dayo"        # ZOI
+    "ZOI-dayo"        # zoi_dayo
   ]
 }
