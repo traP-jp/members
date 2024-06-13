@@ -79,11 +79,11 @@ jobs:
         with:
           script: |
             const message = `${{ steps.plan.outputs.stdout }}`;
-            let filteredMessage = "`terraform plan`\n```\n" + message.split('\n').filter(line => !line.includes('Refreshing state...')).filter(line => !line.includes('Note:')).join('\n') + "\n```";
+            let filteredMessage = "`terraform plan`\n<details>\n\n```\n" + message.split('\n').filter(line => !line.includes('Refreshing state...')).filter(line => !line.includes('Note:')).join('\n') + "\n```\n\n</details>";
 
             if (filteredMessage.Length > 65535) {
               console.log("Plan output is too long, truncating...");
-              filteredMessage = filteredMessage.substring(0, 65400);
+              filteredMessage = filteredMessage.substring(0, 65400) + "\n</details>";
               filteredMessage += "\n```\n\nPlan output was too long and was truncated. Please check the actions log";
             }
 
