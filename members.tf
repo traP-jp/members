@@ -75,7 +75,7 @@ locals {
     "ogu-kazemiya",    # ogu_kazemiya
     "oribe1115",       # oribe
     "penguin23-001",   # penguin23
-    "Pentakon",        # Pentakon
+    "Pentakon26",      # Pentakon
     "pikachu0310",     # pikachu
     "pippi0057",       # pippi0057
     "pirosiki197",     # pirosiki
