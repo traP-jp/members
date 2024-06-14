@@ -5,6 +5,7 @@ locals {
     "abap34",         # abap34
     "Aketami23",      # aketami
     "Akira-256",      # Akira_256
+    "alcedo-taku",    # wakky
     "alex3333python", # alex_python
     "alter334",       # Alt--er
     "AlteraKlam",     # Alietty
@@ -103,6 +104,7 @@ locals {
     "Sotatsu57",       # Sotatsu
     "soucy-745",       # soucy
     "SSlime-s",        # SSLime
+    "stamtam",         # stam
     "sumirinn",        # sumirin
     "Synori",          # Synori
     # "Takeno-hito", # Takeno_hito admin
