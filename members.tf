@@ -11,6 +11,7 @@ locals {
     "AlteraKlam",     # Alietty
     "anko9801",       # anko
     "Apple000001",    # Apple
+    "AstartetraP",    # Astarte
     "aster34",        # Aster
     "aya-se",         # aya_se
     "Ayaka-mogumogu", # mogumogu1515
@@ -50,6 +51,7 @@ locals {
     "kamecha",         # kamecha
     "kanibaku",        # kanibaku8
     "karo1111111",     # karo
+    "katsudontech",    # katsudon
     "kavos113",        # Kavos
     "Kein1048596",     # Kein
     "kenken714",       # kenken
@@ -113,6 +115,7 @@ locals {
     "Synori",          # Synori
     # "Takeno-hito", # Takeno_hito admin
     "taxfree-python", # tax_free
+    "the-edible-pan", # the_edible_pan
     "Thunder32768",   # Cd_48
     "tkr-555",        # tkr_d_555
     "tobuhitodesu",   # tobuhitodesu
