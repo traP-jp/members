@@ -104,7 +104,7 @@ locals {
     "sh0go07",         # shogotin
     "shibutomo",       # Mozuya
     "shushuya0210",    # eru_o2lo
-    "shota873",        # shota_s
+    "shota973",        # shota_s
     "Silent-Clubstep", # shunapo
     "Sokugame",        # sokugame
     "soramea",         # soramea
