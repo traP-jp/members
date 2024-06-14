@@ -93,6 +93,7 @@ locals {
     "ras0q",           # Ras
     "reiroop",         # rei
     "riku6174",        # riku_6174
+    "Rozelin-dc",      # Rozelin
     "s9-sukyu",        # s9
     "saitenntaisei",   # saiten
     "SakanoYuito",     # shirasu_oisi
@@ -103,6 +104,7 @@ locals {
     "sh0go07",         # shogotin
     "shibutomo",       # Mozuya
     "shushuya0210",    # eru_o2lo
+    "shota973",        # shota_s
     "Silent-Clubstep", # shunapo
     "Sokugame",        # sokugame
     "soramea",         # soramea
