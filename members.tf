@@ -9,6 +9,7 @@ locals {
     "alex3333python", # alex_python
     "alter334",       # Alt--er
     "AlteraKlam",     # Alietty
+    "anko9801",       # anko
     "Apple000001",    # Apple
     "aster34",        # Aster
     "aya-se",         # aya_se
@@ -19,6 +20,7 @@ locals {
     "cobalt1024",     # cobalt
     "comavius",       # comavius
     "cp-20",          # cp20
+    "dye8128",        # Dye
     "emura0",         # emura
     "eran1515",       # Eran
     "eyerust",        # michadaniel
@@ -48,6 +50,7 @@ locals {
     "kamecha",         # kamecha
     "kanibaku",        # kanibaku8
     "karo1111111",     # karo
+    "kavos113",        # Kavos
     "Kein1048596",     # Kein
     "kenken714",       # kenken
     "kisepichu",       # tqk
@@ -106,6 +109,7 @@ locals {
     "SSlime-s",        # SSLime
     "stamtam",         # stam
     "sumirinn",        # sumirin
+    "superharuma",     # haruma
     "Synori",          # Synori
     # "Takeno-hito", # Takeno_hito admin
     "taxfree-python", # tax_free

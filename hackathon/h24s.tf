@@ -29,7 +29,7 @@ locals {
       "Pentakon26", "pippi0057", "pirosiki197", "PL-38", "Pugma", "reiroop", "riku6174", "Series-205",
       "Synori", "trasta298", "ultsaza", "zer0-star", "aya-se", "shushuya0210", "mumumu6",
       "ZOI-dayo", "yuhima03", "cp-20", "AlteraKlam", "Propromp", "ynta-3", "shibutomo", "Silent-Clubstep", "comavius",
-      "stamtam", "alcedo-taku"
+      "stamtam", "alcedo-taku", "ramdos0207", "anko9801", "dye8128", "kavos113", "superharuma"
     ]
     maintainers = ["Takeno-hito", "kaitoyama", "H1rono", "ikura-hamu"]
   }
@@ -92,6 +92,13 @@ locals {
       members = []
       maintainers = [
         "blancnoir256", "kamecha", "karo1111111", "Kuh456", "mirin-mochigome", "YMAC-STICK"
+      ]
+    }
+
+    "h24s_33" = {
+      members = []
+      maintainers = [
+        "ramdos0207", "anko9801", "dye8128", "kavos113", "superharuma"
       ]
     }
   }
