@@ -5,7 +5,7 @@ locals {
     "abap34",         # abap34
     "Aketami23",      # aketami
     "Akira-256",      # Akira_256
-    "wakky-alcedo",    # wakky
+    "wakky-alcedo",   # wakky
     "alex3333python", # alex_python
     "alter334",       # Alt--er
     "AlteraKlam",     # Alietty
