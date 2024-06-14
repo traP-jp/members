@@ -28,7 +28,7 @@ locals {
       "motoki317", "mtaku3", "nagaeki", "Nattuki", "nokhnaton", "noya2ruler", "ogu-kazemiya",
       "Pentakon26", "pippi0057", "pirosiki197", "PL-38", "Pugma", "reiroop", "riku6174", "Series-205",
       "Synori", "trasta298", "ultsaza", "zer0-star", "aya-se", "shushuya0210", "mumumu6",
-      "ZOI-dayo", "yuhima03", "cp-20", "AlteraKlam", "Propromp", "ynta-3", "shibutomo", "Silent-Clubstep", "comavius",
+      "ZOI-dayo", "YuHima03", "cp-20", "AlteraKlam", "Propromp", "ynta-3", "shibutomo", "Silent-Clubstep", "comavius",
       "stamtam", "alcedo-taku", "ramdos0207", "anko9801", "dye8128", "kavos113", "superharuma",
       "inutamago-dogegg", "katsudontech", "AstartetraP", "the-edible-pan", "Rozelin-dc", "shota973",
       "Sotatsu57", "kisepichu", "Nzt3-gh"
@@ -93,7 +93,7 @@ locals {
     }
 
     "h24s_24" = {
-      members     = ["AlteraKlam", "ZOI-dayo", "yuhima03"]
+      members     = ["AlteraKlam", "ZOI-dayo", "YuHima03"]
       maintainers = ["cp-20", "ikura-hamu"]
     }
 
