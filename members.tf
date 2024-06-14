@@ -133,7 +133,7 @@ locals {
     "YMAC-STICK",     # YMAC
     "ynta-3",         # Hokaze
     "yuchi-cpu",      # u
-    "yuhima03",       # tidus
+    "YuHima03",       # tidus
     "Yuki-Ots",       # Umin
     "yukikurage",     # yukikurage
     "zer0-star",      # zer0-star
