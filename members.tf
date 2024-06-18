@@ -38,7 +38,7 @@ locals {
     "hijiki51",    # hijiki51
     "hinamas2004", # hinamas2004
     "Hueter57",    # Hueter
-    "hyde616",     # Hyde_616
+    "Hyde616",     # Hyde_616
     "iChemy",      # iChemy
     # "ikura-hamu", # ikura-hamu admin
     "Imperi13",         # Imperi

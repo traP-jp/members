@@ -23,7 +23,7 @@ locals {
   h24s_parent = {
     members = [
       "alex3333python", "alter334", "aster34", "ayanakm", "blancnoir256", "ErrorSyntax1",
-      "Futadaruma", "eyerust", "H1rono", "hatchch", "hyde616", "itt828", "jippo-m", "kamecha",
+      "Futadaruma", "eyerust", "hatchch", "Hyde616", "itt828", "jippo-m", "kamecha",
       "karo1111111", "kn-tech", "Kuh456", "Liscome", "Luftalian", "Luke256", "mathsuky", "mehm8128",
       "motoki317", "mtaku3", "nagaeki", "Nattuki", "nokhnaton", "noya2ruler", "ogu-kazemiya",
       "Pentakon26", "pippi0057", "pirosiki197", "PL-38", "Pugma", "reiroop", "riku6174", "Series-205",
@@ -40,7 +40,7 @@ locals {
     "h24s_04" = {
       members = []
       maintainers = [
-        "alter334", "hyde616", "kn-tech", "mehm8128", "noya2ruler"
+        "alter334", "Hyde616", "kn-tech", "mehm8128", "noya2ruler"
       ]
     }
     "h24s_10" = {
