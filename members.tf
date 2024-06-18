@@ -13,6 +13,7 @@ locals {
     "Apple000001",    # Apple
     "AstartetraP",    # Astarte
     "aster34",        # Aster
+    "Au294",          # Au2942
     "aya-se",         # aya_se
     "Ayaka-mogumogu", # mogumogu1515
     "ayanakm",        # ayana
@@ -37,7 +38,7 @@ locals {
     "hijiki51",    # hijiki51
     "hinamas2004", # hinamas2004
     "Hueter57",    # Hueter
-    "hyde616",     # Hyde_616
+    "Hyde616",     # Hyde_616
     "iChemy",      # iChemy
     # "ikura-hamu", # ikura-hamu admin
     "Imperi13",         # Imperi
