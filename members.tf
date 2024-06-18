@@ -13,6 +13,7 @@ locals {
     "Apple000001",    # Apple
     "AstartetraP",    # Astarte
     "aster34",        # Aster
+    "Au294",          # Au2942
     "aya-se",         # aya_se
     "Ayaka-mogumogu", # mogumogu1515
     "ayanakm",        # ayana
