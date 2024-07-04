@@ -61,14 +61,12 @@ jobs:
         id: fmt
         run: terraform fmt -diff -no-color -recursive .
 
-      - if: steps.fmt.outputs.stdout == ''
-        run: exit 0
-
       - name: Exit if trigger is workflow_dispatch and fmt failed # workflow_dispatchからの実行ではコミットしない
         if: github.event_name == 'workflow_dispatch'
-        run: exit 1
+        run: test ${{ steps.fmt.outputs.stdout }} == ''
 
       - name: Commit changes
+        if: steps.fmt.outputs.stdout != ''
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
@@ -77,9 +75,11 @@ jobs:
           git push origin HEAD:${{ github.event.pull_request.head.ref }}
 
       - name: Call plan workflow
+        if: steps.fmt.outputs.stdout != ''
         uses: ./.github/workflows/plan.yml
 
-      - run: exit 1
+      - if: steps.fmt.outputs.stdout != ''
+        run: exit 1
 
   plan:
     needs: fmt
