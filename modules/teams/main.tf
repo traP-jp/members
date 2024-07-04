@@ -11,7 +11,7 @@ resource "github_team_members" "team_members" {
 
   dynamic "members" {
     for_each = toset(var.members)
-    content { 
+    content {
       username = members.value
       role     = "member"
     }
