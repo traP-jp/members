@@ -38,9 +38,13 @@ jobs:
 
   fmt:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
@@ -48,7 +52,21 @@ jobs:
           terraform_version: ${{ env.TERRAFORM_VERSION }}
 
       - name: Terraform fmt
-        run: terraform fmt -check -diff -recursive .
+        id: fmt
+        run: terraform fmt -diff -no-color -recursive .
+
+      - name: Exit if trigger is workflow_dispatch and fmt failed # workflow_dispatchからの実行ではコミットしない
+        if: github.event_name == 'workflow_dispatch' && steps.fmt.outputs != ''
+        run: exit 1
+
+      - name: Commit changes
+        if: steps.fmt.outputs.stdout != ''
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add .
+          git commit -m '[CI] terraform fmt'
+          git push origin HEAD:${{ github.event.pull_request.head.ref }}
 
   plan:
     runs-on: ubuntu-latest
