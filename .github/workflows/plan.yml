@@ -74,13 +74,6 @@ jobs:
           git commit -m '[CI] terraform fmt'
           git push origin HEAD:${{ github.event.pull_request.head.ref }}
 
-      - name: Call plan workflow
-        if: steps.fmt.outputs.stdout != ''
-        uses: ./.github/workflows/plan.yml
-
-      - if: steps.fmt.outputs.stdout != ''
-        run: exit 1
-
   plan:
     needs: fmt
     runs-on: ubuntu-latest
