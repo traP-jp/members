@@ -19,6 +19,7 @@ locals {
     "ayanakm",        # ayana
     "beferia",        # beferia
     "blancnoir256",   # BN256
+    "cho3881392697",  # cho
     "cobalt1024",     # cobalt
     "comavius",       # comavius
     "cp-20",          # cp20
@@ -26,6 +27,7 @@ locals {
     "emura0",         # emura
     "eran1515",       # Eran
     "eyerust",        # michadaniel
+    "Eraxyso",        # Eraxyso
     "ErrorSyntax1",   # SyntaxError
     "eyemono-moe",    # d_etteiu8383
     "Futadaruma",     # Futadaruma
@@ -82,6 +84,7 @@ locals {
     "oER4",            # o_ER4
     "ogu-kazemiya",    # ogu_kazemiya
     "oribe1115",       # oribe
+    "parahailob",      # malfisto
     "penguin23-001",   # penguin23
     "Pentakon26",      # Pentakon
     "pikachu0310",     # pikachu
@@ -89,6 +92,7 @@ locals {
     "pirosiki197",     # pirosiki
     "PL-38",           # PL-38
     "Propromp",        # matsun
+    "PonponJuice",     # Ponjuice
     "Pugma",           # Pugma
     "ramdos0207",      # ramdos
     "ras0q",           # Ras
@@ -104,6 +108,7 @@ locals {
     "Series-205",      # Series_205
     "sh0go07",         # shogotin
     "shibutomo",       # Mozuya
+    "shobonvip",       # shobon
     "shushuya0210",    # eru_o2lo
     "shota973",        # shota_s
     "Silent-Clubstep", # shunapo
@@ -135,6 +140,7 @@ locals {
     "ynta-3",         # Hokaze
     "yuchi-cpu",      # u
     "YuHima03",       # tidus
+    "yuiveslkao",     # Naru820
     "Yuki-Ots",       # Umin
     "yukikurage",     # yukikurage
     "zer0-star",      # zer0-star
