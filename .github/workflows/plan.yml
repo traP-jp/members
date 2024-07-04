@@ -38,6 +38,8 @@ jobs:
 
   fmt:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -48,7 +50,17 @@ jobs:
           terraform_version: ${{ env.TERRAFORM_VERSION }}
 
       - name: Terraform fmt
-        run: terraform fmt -check -diff -recursive .
+        id: fmt
+        run: terraform fmt -recursive .
+
+      - name: Commit changes
+        if: steps.fmt.outputs.stdout != ''
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add .
+          git commit -m '[CI] terraform fmt'
+          git push
 
   plan:
     runs-on: ubuntu-latest
