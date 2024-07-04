@@ -51,7 +51,11 @@ jobs:
 
       - name: Terraform fmt
         id: fmt
-        run: terraform fmt -recursive .
+        run: terraform fmt -diff -no-color -recursive .
+
+      - name: Exit if trigger is workflow_dispatch and fmt failed # workflow_dispatchからの実行ではコミットしない
+        if: github.event_name == 'workflow_dispatch' && steps.fmt.outputs != ''
+        run: exit 1
 
       - name: Commit changes
         if: steps.fmt.outputs.stdout != ''
@@ -60,7 +64,7 @@ jobs:
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
           git add .
           git commit -m '[CI] terraform fmt'
-          git push
+          git push origin HEAD:${{ github.event.pull_request.head.ref }}
 
   plan:
     runs-on: ubuntu-latest
