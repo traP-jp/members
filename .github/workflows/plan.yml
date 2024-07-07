@@ -63,7 +63,9 @@ jobs:
 
       - name: Exit if trigger is workflow_dispatch and fmt failed # workflow_dispatchからの実行ではコミットしない
         if: github.event_name == 'workflow_dispatch'
-        run: test ${{ steps.fmt.outputs.stdout }} == ''
+        env:
+          TF_FMT_OUTPUT: ${{ steps.fmt.outputs.stdout }}
+        run: test -z "$TF_FMT_OUTPUT"
 
       - name: Commit changes
         if: steps.fmt.outputs.stdout != ''
