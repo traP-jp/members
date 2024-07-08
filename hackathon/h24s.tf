@@ -22,19 +22,98 @@ module "h24s_children_teams" {
 locals {
   h24s_parent = {
     members = [
-      "ErrorSyntax1", "Liscome", "H1rono", "itt828", "PL-38"
+      "alex3333python", "alter334", "aster34", "ayanakm", "blancnoir256", "ErrorSyntax1",
+      "Futadaruma", "eyerust", "hatchch", "Hyde616", "itt828", "jippo-m", "kamecha",
+      "karo1111111", "kn-tech", "Kuh456", "Liscome", "Luftalian", "Luke256", "mathsuky", "mehm8128",
+      "motoki317", "mtaku3", "nagaeki", "Nattuki", "nokhnaton", "noya2ruler", "ogu-kazemiya",
+      "Pentakon26", "pippi0057", "pirosiki197", "PL-38", "Pugma", "reiroop", "riku6174", "Series-205",
+      "Synori", "trasta298", "ultsaza", "zer0-star", "aya-se", "shushuya0210", "mumumu6",
+      "ZOI-dayo", "YuHima03", "cp-20", "AlteraKlam", "Propromp", "ynta-3", "shibutomo", "Silent-Clubstep", "comavius",
+      "stamtam", "wakky-alcedo", "ramdos0207", "anko9801", "dye8128", "kavos113", "superharuma",
+      "inutamago-dogegg", "katsudontech", "AstartetraP", "the-edible-pan", "Rozelin-dc", "shota973",
+      "Sotatsu57", "kisepichu", "Nzt3-gh", "Au294"
     ]
     maintainers = ["Takeno-hito", "kaitoyama", "H1rono", "ikura-hamu"]
   }
 
   h24s_children = {
+    "h24s_04" = {
+      members = []
+      maintainers = [
+        "alter334", "Hyde616", "kn-tech", "mehm8128", "noya2ruler"
+      ]
+    }
+    "h24s_10" = {
+      members = []
+      maintainers = [
+        "jippo-m", "Luftalian", "nokhnaton", "ogu-kazemiya", "pippi0057", "pirosiki197"
+      ]
+    }
+    "h24s_13" = {
+      members = []
+      maintainers = [
+        "Futadaruma", "mathsuky", "motoki317", "riku6174", "Series-205"
+      ]
+    }
+    "h24s_14" = {
+      members = []
+      maintainers = [
+        "alex3333python", "eyerust", "Nattuki", "reiroop", "ultsaza", "zer0-star"
+      ]
+    }
+    "h24s_15" = {
+      members = []
+      maintainers = [
+        "inutamago-dogegg", "katsudontech", "AstartetraP", "the-edible-pan", "Au294"
+      ]
+    }
     "h24s_16" = {
-      members     = ["ayanakm", "nagaeki", "mtaku3", "aster34"]
-      maintainers = ["Pugma", "trasta298"]
-    },
+      members = []
+      maintainers = [
+        "aster34", "ayanakm", "mtaku3", "nagaeki", "Pugma", "trasta298"
+      ]
+    }
     "h24s_17" = {
       members     = ["ErrorSyntax1", "Liscome", "PL-38"]
       maintainers = ["itt828", "H1rono"]
+    }
+    "h24s_18" = {
+      members     = ["shushuya0210", "mumumu6", "stamtam", "wakky-alcedo"]
+      maintainers = ["Takeno-hito", "aya-se"]
+    }
+    "h24s_19" = {
+      members = []
+      maintainers = [
+        "Rozelin-dc", "shota973", "Sotatsu57", "kisepichu", "Nzt3-gh"
+      ]
+    }
+    "h24s_21" = {
+      members     = []
+      maintainers = ["Synori", "Luke256", "hatchch", "Pentakon26"]
+    }
+
+    "h24s_24" = {
+      members     = ["AlteraKlam", "ZOI-dayo", "YuHima03"]
+      maintainers = ["cp-20", "ikura-hamu"]
+    }
+
+    "h24s_25" = {
+      members     = ["Propromp", "ynta-3", "shibutomo", "Silent-Clubstep"]
+      maintainers = ["comavius"]
+    }
+
+    "h24s_32" = {
+      members = []
+      maintainers = [
+        "blancnoir256", "kamecha", "karo1111111", "Kuh456", "mirin-mochigome", "YMAC-STICK"
+      ]
+    }
+
+    "h24s_33" = {
+      members = []
+      maintainers = [
+        "ramdos0207", "anko9801", "dye8128", "kavos113", "superharuma"
+      ]
     }
   }
 }

@@ -47,5 +47,15 @@ locals {
       maintainers = ["ras0q"]
       description = "2021春ハッカソン"
     }
+
+    "traOJudge" = {
+      maintainers = ["kenken714"]
+      members = [
+        "cho3881392697", "comavius", "dye8128", "Eraxyso", "ErrorSyntax1", "hayatroid", "Kaki256",
+        "kisepichu", "mathsuky", "noya2ruler", "ogu-kazemiya", "parahailob", "PonponJuice",
+        "Pugma", "ramdos0207", "Sotatsu57", "YuHima03", "yuiveslkao", "zer0-star", "ZOI-dayo", "shobonvip",
+      ]
+      description = "traO Judge"
+    }
   }
 }
