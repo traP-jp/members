@@ -27,7 +27,7 @@ locals {
     }
 
     "pg-basic-contributor" = {
-      members     = ["kenken714", "ErrorSyntax1", "Kaki256", "ZOI-dayo", "miko-misa", "comavius"]
+      members     = ["kenken714", "ErrorSyntax1", "Kaki256", "ZOI-dayo", "miko-misa", "comavius", "Pugma", "ogu-kazemiya"]
       maintainers = ["Takeno-hito"]
     }
 
